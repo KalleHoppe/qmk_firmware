@@ -3,7 +3,9 @@
 MCU = atmega32u4
 
 # Bootloader selection
-BOOTLOADER = caterina
+BOOTLOADER = atmel-dfu
+OLED_ENABLE     = yes
+OLED_DRIVER     = SSD1306
 
 # Build Options
 #   change yes to no to disable
@@ -20,3 +22,6 @@ UNICODE_ENABLE = yes        # Unicode
 AUDIO_ENABLE = no           # Audio output
 SPLIT_KEYBOARD = yes        # Use shared split_common code
 LAYOUTS = split_3x6_3
+
+#Buildtime uptimizations
+EXTRAFLAGS += -flto

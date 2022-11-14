@@ -83,10 +83,13 @@
 //#define DIODE_DIRECTION COL2ROW
 
 /* disable debug print */
-//#define NO_DEBUG
-
 /* disable print */
-//#define NO_PRINT
+#ifndef NO_DEBUG
+#define NO_DEBUG
+#endif // !NO_DEBUG
+#if !defined(NO_PRINT) && !defined(CONSOLE_ENABLE)
+#define NO_PRINT
+#endif // !NO_PRINT
 
 /* disable action features */
 //#define NO_ACTION_LAYER
