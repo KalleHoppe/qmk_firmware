@@ -17,6 +17,7 @@
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
+#define TAPPING_TERM 240
 
 /* Serial settings */
 #define USE_SERIAL
