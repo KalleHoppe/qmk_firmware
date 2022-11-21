@@ -1,16 +1,20 @@
 # hopper
 
-![hopper](imgur.com image replace me!)
+![hopper](https://github.com/KalleHoppe/Hopper/blob/main/images/hopperMX.jpg)
 
 *A short description of the keyboard/project*
 
 * Keyboard Maintainer: [Kalle Hoppe](https://github.com/Kalle Hoppe)
-* Hardware Supported: *The PCBs, controllers supported*
-* Hardware Availability: *Links to where you can find this hardware*
+* Hardware Supported: Custom [Hopper PCB](https://github.com/KalleHoppe/Hopper), controller ProMicro compatible*
+* Hardware Availability: Can be found from most keyboard builder sites.
 
 Make example for this keyboard (after setting up your build environment):
 
     make hopper:default
+    
+    or 
+    
+    make hopper:sweep
 
 Flashing example for this keyboard:
 
