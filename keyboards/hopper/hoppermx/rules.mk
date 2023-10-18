@@ -4,8 +4,8 @@ MCU = atmega32u4
 
 # Bootloader selection
 BOOTLOADER = atmel-dfu
-OLED_ENABLE     = yes
-OLED_DRIVER     = SSD1306
+#OLED_ENABLE     = no
+#OLED_DRIVER     = SSD1306
 
 # Build Options
 #   change yes to no to disable

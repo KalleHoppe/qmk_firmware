@@ -3,7 +3,7 @@
 
 #pragma once
 
-#include "config_common.h"
+//#include "config_common.h"
 /* key matrix size */
 // Rows are doubled-up
 #define MATRIX_ROWS  8
@@ -31,7 +31,7 @@
  *  These options are also useful to firmware size reduction.
  */
 /* ws2812 RGB LED */
-#define RGB_DI_PIN      D3
+#define WS2812_DI_PIN D3
 
 #ifdef RGBLIGHT_ENABLE
 
@@ -46,19 +46,20 @@
 #   define RGBLIGHT_EFFECT_ALTERNATING
 #   define RGBLIGHT_EFFECT_TWINKLE
 
-#   define RGBLED_NUM 54
+#   define RGBLED_NUM 40
 #   define RGBLED_SPLIT \
-        { 27, 27 }
+        { 20, 20 }
 #endif
 
 #ifdef RGB_MATRIX_ENABLE
-#    define RGBLED_NUM       54 // Number of LEDs
+#    define RGBLED_NUM     40 // Number of LEDs
 #    define DRIVER_LED_TOTAL RGBLED_NUM
 #    define RGB_MATRIX_SPLIT \
-        { 27, 27 }
+        { 20, 20 }
 #    define SPLIT_TRANSPORT_MIRROR
 
 #   define ENABLE_RGB_MATRIX_ALPHAS_MODS
+#   define ENABLE_LED_MATRIX_CYCLE_LEFT_RIGHT
 #   define ENABLE_RGB_MATRIX_GRADIENT_UP_DOWN
 #   define ENABLE_RGB_MATRIX_GRADIENT_LEFT_RIGHT
 #   define ENABLE_RGB_MATRIX_BREATHING
