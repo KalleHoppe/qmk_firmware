@@ -10,19 +10,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	  * ├───┼───┼───┼───┼───┼───┤	   ├───┼───┼───┼───┼───┼───┤
 	  *	    │ Z │ X │ C │ V │ B │	   │ N │ M │ , │ . │ / │
 	  *	    ┴───┴───┴───┴───┴───┘	   └───┴───┴───┴───┴───┴
-	  *			   ┌───┐				   ┌───┐
-	  *			   │GUI├───┐		   ┌───┤Alt│
-	  *			   └───┤Bsp├───┐   ┌───┤Ent├───┘
-	  *				   └───┤   │   │   ├───┘
+	  *			   ┌───┐				   ┌────┐
+	  *			   │GUI├───┐		   ┌───┤RAlt│
+	  *			   └───┤Del├────┐   ┌───┤Ent├────┘
+	  *				   └───┤LAlt│  │Bsp ───┘
 	  *					   └───┘   └───┘
 	  */
 	[0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.					,-----------------------------------------------------.
-	   KC_TAB,  KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,						 KC_Y,	KC_U,	KC_I,	KC_O,   KC_P,       KC_LBRC,
+	   KC_TAB,  KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,						 KC_Y,		KC_U,	KC_I,	KC_O,     KC_P,    KC_LBRC,
   //|--------+--------+--------+--------+--------+--------|					|--------+--------+--------+--------+--------+--------|
-	  KC_LCTL,  KC_A,   LT(2,KC_S),  LT(6,KC_D), LT(3,KC_F), KC_G,			 KC_H,	LT(4,KC_J),	KC_K,	KC_L,   KC_SCLN,    KC_QUOT,
+	  KC_LCTL,  KC_A,   LT(2,KC_S),  LT(6,KC_D), LT(3,KC_F), KC_G,			 KC_H,	LT(4,KC_J),	KC_K,	KC_L,   KC_SCLN,   KC_QUOT,
   //|--------+--------+--------+--------+--------+--------|					|--------+--------+--------+--------+--------+--------|
-			MT(MOD_LCTL,KC_Z),LT(6,KC_X), KC_C,	KC_V,	KC_B,			    KC_N,	KC_M, KC_COMM,  KC_DOT, LT(9,KC_SLSH),
+			MT(MOD_LCTL,KC_Z),LT(5,KC_X), KC_C,	KC_V,	KC_B,			     KC_N,	KC_M, KC_COMM,  KC_DOT, LT(9,KC_SLSH),
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
 						  KC_LGUI,   MT(MOD_LSFT,KC_DEL),  KC_LALT,	        KC_BSPC, LT(7,KC_SPC),  KC_RALT
 									  //`--------------------------'  `--------------------------'
@@ -30,30 +30,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 // ColemakDH
 	[1] = LAYOUT_split_3x6_3(
-		KC_TAB,  KC_Q,	KC_W,	KC_F,	KC_P,	KC_B,				   KC_J,  KC_L,	KC_Y,	KC_Y,	KC_SCLN, KC_LBRC,
-		KC_LCTL, KC_A, LT(2,KC_R),	LT(6,KC_S),	LT(3,KC_T),	KC_G,	   KC_M,  LT(4,KC_N),	KC_E,	KC_I,	KC_O,	  KC_QUOT,
-				   _______, _______,	KC_C,	KC_D,	KC_V,		   KC_K,  KC_H,	KC_COMM, KC_DOT,  LT(9,KC_SLSH),
-						_______, MT(MOD_LSFT,KC_DEL), KC_SPC,		   KC_SPC,  LT(7,KC_SPC),  KC_RALT
+		KC_TAB, _______, _______,	 KC_F,		 KC_P,		 KC_B,			KC_J,  		KC_L,		KC_U,		KC_Y,		KC_SCLN, 	_______,
+		KC_LCTL,_______, LT(2,KC_R), LT(6,KC_S), LT(3,KC_T), KC_G,	   		KC_M,  		LT(4,KC_N),	KC_E,		KC_I,		KC_O,	  	_______,
+				_______, _______,	 _______,	 KC_D,		 KC_V,		   	KC_K,  		KC_H,		_______, 	_______,  	_______,
+								_______, 	_______, 	_______,		  	 _______,  	_______,  _______
 	)
 ,
 //navigate
 	[2] = LAYOUT_split_3x6_3(
-		XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,				 KC_PGUP,	KC_HOME, KC_UP,	 KC_END,  XXXXXXX, XXXXXXX,
-		KC_LCTL, KC_A,	KC_R,	KC_S,	KC_T,	KC_G,						 KC_PGDN,	KC_LEFT, KC_DOWN,KC_RGHT, XXXXXXX, XXXXXXX,
-				 XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,			  XXXXXXX,	XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,
-								   _______,  _______, _______,		      XXXXXXX,  XXXXXXX, _______
+		XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,				KC_PGUP,	KC_HOME, KC_UP,	 KC_END,  XXXXXXX, XXXXXXX,
+		KC_LCTL, 	KC_A,	KC_R,	KC_S,	KC_T,	KC_G,					KC_PGDN,	KC_LEFT, KC_DOWN,KC_RGHT, XXXXXXX, XXXXXXX,
+				 XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,				XXXXXXX,	XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,
+								   _______,  _______, _______,				XXXXXXX,	XXXXXXX, _______
 	),
 // Symbols
 	[3] = LAYOUT_split_3x6_3(
-		KC_TAB,  XXXXXXX, XXXXXXX, XXXXXXX,XXXXXXX,KC_ENT,					SE_TILD, SE_UNDS, SE_PIPE,	KC_NUHS,	SE_ACUT, SE_CIRC,
+		KC_TAB,	 XXXXXXX, XXXXXXX, XXXXXXX,	XXXXXXX, KC_ENT,				SE_TILD, SE_UNDS, SE_PIPE,	KC_NUHS,	SE_ACUT, SE_CIRC,
 		SE_CIRC, SE_ASTR, SE_AMPR, _______, _______, _______,			    SE_HASH, SE_EXLM, SE_QUES,	SE_DQUO,	SE_DLR,	  XXXXXXX,
-				 _______, _______, _______, _______, _______,				SE_PERC, SE_UNDS,  KC_NUBS, SE_GRV,  KC_SLSH,
-								   _______,  _______, _______,		        _______,  _______,  _______
+				 _______, _______, _______,	_______, _______,				SE_PERC, SE_UNDS,  KC_NUBS, SE_GRV,  KC_SLSH,
+								   _______,	_______, _______,		        _______,  _______,  _______
 	),
 //Code
 	[4] = LAYOUT_split_3x6_3(
 		_______, SE_DQUO, SE_COLN, SE_LBRC, SE_RBRC, SE_AT, 				_______,    _______,    SE_SLSH,    SE_BSLS,    _______,    _______,
-		_______, SE_LCBR, SE_RCBR, SE_LPRN, SE_RPRN, SE_SCLN,				_______,    KC_N,       _______,    _______,    _______,    _______,
+		_______, SE_LCBR, SE_RCBR, SE_LPRN, SE_RPRN, SE_SCLN,				_______,    XXXXXXX,    _______,    _______,    _______,    _______,
 				 SE_PERC, SE_HASH, SE_LABK, SE_RABK, SE_EQL,				_______,    _______,    _______,    _______,    _______,
 								   _______,  _______, _______,		        _______,    _______,    _______
 	),
