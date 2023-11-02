@@ -33,14 +33,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		KC_TAB, _______, _______,	 KC_F,		 KC_P,		 KC_B,			KC_J,  		KC_L,		KC_U,		KC_Y,		KC_SCLN, 	_______,
 		KC_LCTL,_______, LT(2,KC_R), LT(6,KC_S), LT(3,KC_T), KC_G,	   		KC_M,  		LT(4,KC_N),	KC_E,		KC_I,		KC_O,	  	_______,
 				_______, _______,	 _______,	 KC_D,		 KC_V,		   	KC_K,  		KC_H,		_______, 	_______,  	_______,
-								_______, 	_______, 	_______,		  	 _______,  	_______,  _______
+								_______, 	_______, 	_______,		  	_______,  	_______,  _______
 	)
 ,
 //navigate
 	[2] = LAYOUT_split_3x6_3(
 		XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,				KC_PGUP,	KC_HOME, KC_UP,	 KC_END,  XXXXXXX, XXXXXXX,
 		KC_LCTL, 	KC_A,	KC_R,	KC_S,	KC_T,	KC_G,					KC_PGDN,	KC_LEFT, KC_DOWN,KC_RGHT, XXXXXXX, XXXXXXX,
-				 XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,				XXXXXXX,	XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,
+				 XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,				XXXXXXX,	KC_BTN4, XXXXXXX, KC_BTN5,  XXXXXXX,
 								   _______,  _______, _______,				XXXXXXX,	XXXXXXX, _______
 	),
 // Symbols
@@ -69,14 +69,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		_______, _______, _______, _______, _______, _______, 				KC_PPLS,  KC_7, KC_8, KC_9, KC_PAST, XXXXXXX,
 		_______, _______, _______, _______, _______, _______,				KC_PMNS,  KC_4, KC_5, KC_6, KC_PSLS, XXXXXXX,
 				 _______, _______, _______, _______, _______, 				KC_PEQL,  KC_1, KC_2, KC_3, SE_PERC,
-								   _______,  _______, _______,		        KC_0,  KC_DOT, KC_COMM
+								   _______,  _______, _______,		        KC_DOT,	  KC_0, KC_COMM
 	),
 //System
 	[7] = LAYOUT_split_3x6_3(
-		KC_TAB,  KC_ESC,  _______,  _______, _______,LCTL(KC_C),					XXXXXXX, XXXXXXX, KC_F5,   KC_Y,	KC_SCLN, KC_LBRC,
+		LSFT(KC_TAB),  KC_ESC,  _______,  _______, _______,LCTL(KC_C),					XXXXXXX, XXXXXXX, KC_F5,   KC_Y,	KC_SCLN, KC_LBRC,
 		KC_LCTL, _______, _______, KC_S, KC_ENT, LCTL(KC_V),					XXXXXXX, KC_LGUI, KC_SYRQ, KC_L,	KC_ENT,	  KC_QUOT,
 				_______, _______,	_______,_______,LCTL(KC_X),			        KC_K,	 KC_H,	  KC_COMM, KC_DOT,  KC_SLSH,
-						   KC_LGUI, KC_LCTL, KC_LALT,		                KC_SPC,  KC_ENT,  DF(0)
+						   KC_LGUI, KC_LSFT, KC_LALT,		                KC_SPC,  XXXXXXX,  DF(0)
 	),
 
     [9] = LAYOUT_split_3x6_3(
